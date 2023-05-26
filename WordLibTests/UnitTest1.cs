@@ -9,31 +9,33 @@ public class UnitTest1
     {
         // Create an instance to test:
         Worder worder = new Worder();
-        string palindrome = "radar";
 
+        // expected output
+        string expectedResult = "radar";
+        string inputWord = "radar";
         // Run the method under test:
-        bool result = worder.IsPalindrome(palindrome);
+        string actualResult = worder.IsPalindromeWordChecker(inputWord);
 
         // Assert / Verify the result:
-        Assert.IsTrue(result);
+        Assert.AreEqual(expectedResult, actualResult);
 
-        
+
     }
-
 
     [TestMethod]
-    public void IsPalindromeTestTwo()
+
+    public void IsPalindromeThrowsException()
     {
-        // Create an instance to test:
         Worder worder = new Worder();
-        string word = "boat";
+        string inputWord = null;
 
-        // Run the method under test:
-        bool falseResult = worder.IsPalindromeTestTwo(word);
+        Assert.ThrowsException<ArgumentException>(() => worder.IsPalindromeWordChecker(inputWord));
 
-        // Assert / Verify the result:
-        Assert.IsFalse(falseResult);
+
     }
+
 
 
 }
+
+
