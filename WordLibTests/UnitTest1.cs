@@ -25,7 +25,7 @@ public class UnitTest1
 
     [TestMethod]
 
-    public void IsPalindromeThrowsExceptionTrue()
+    public void IsPalindromeThrowsException()
     {
         // Create an instance to test:
         Worder worder = new Worder();
@@ -51,9 +51,25 @@ public class UnitTest1
         string inputWord = "Stockholm";
 
         // Run the method under test:
-        string actualResult = worder.CheckingStringLength(inputWord);
+        int actualResult = worder.CheckingStringLength(inputWord);
         // Assert / Verify the result:
         Assert.AreEqual(expectedOutput, actualResult);
+
+
+    }
+
+    [TestMethod]
+
+    public void StringLenghtCheckThrowsException()
+    {
+        // Create an instance to test:
+        Worder worder = new Worder();
+
+        // expected output
+        string inputWord = null;
+
+        // Assert / Verify the result:
+        Assert.ThrowsException<ArgumentException>(() => worder.CheckingStringLength(inputWord));
 
 
     }

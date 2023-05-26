@@ -29,8 +29,17 @@ public class Worder
 
     }
 
-    public string CheckingStringLength(string inputWord)
+    public int CheckingStringLength(string inputWord)
     {
-        throw new NotImplementedException();
+
+        // Checking if the empty string by using is null or empty metod
+        if (string.IsNullOrEmpty(inputWord))
+        {
+            throw new ArgumentException("Input string cannot be empty. Please try again");
+        }
+
+        int numbersInLetter = inputWord.Length;
+
+        return numbersInLetter;
     }
 }
