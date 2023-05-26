@@ -1,7 +1,7 @@
 ﻿namespace WordLib;
 public class Worder
 {
-    public static string IsPalindromeWordChecker(string inputWord)
+    public string IsPalindromeWordChecker(string inputWord)
     {
 
         // Checking if the empty string by using is null or empty metod

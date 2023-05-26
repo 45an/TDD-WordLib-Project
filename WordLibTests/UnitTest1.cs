@@ -15,7 +15,7 @@ public class UnitTest1
         string expectedResult = "radar";
         string inputWord = "radar";
         // Run the method under test:
-        string actualResult = Worder.IsPalindromeWordChecker(inputWord);
+        string actualResult = worder.IsPalindromeWordChecker(inputWord);
 
         // Assert / Verify the result:
         Assert.AreEqual(expectedResult, actualResult);
@@ -34,7 +34,7 @@ public class UnitTest1
         string inputWord = null;
 
         // Assert / Verify the result:
-        Assert.ThrowsException<ArgumentException>(() => Worder.IsPalindromeWordChecker(inputWord));
+        Assert.ThrowsException<ArgumentException>(() => worder.IsPalindromeWordChecker(inputWord));
 
 
     }
