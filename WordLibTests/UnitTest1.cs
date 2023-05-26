@@ -1,4 +1,5 @@
-﻿using WordLib;
+﻿using Microsoft.VisualStudio.TestPlatform.Utilities;
+using WordLib;
 namespace WordLibTests;
 
 [TestClass]
@@ -14,7 +15,7 @@ public class UnitTest1
         string expectedResult = "radar";
         string inputWord = "radar";
         // Run the method under test:
-        string actualResult = worder.IsPalindromeWordChecker(inputWord);
+        string actualResult = Worder.IsPalindromeWordChecker(inputWord);
 
         // Assert / Verify the result:
         Assert.AreEqual(expectedResult, actualResult);
@@ -24,15 +25,40 @@ public class UnitTest1
 
     [TestMethod]
 
-    public void IsPalindromeThrowsException()
+    public void IsPalindromeThrowsExceptionTrue()
     {
+        // Create an instance to test:
         Worder worder = new Worder();
+
+        // expected output
         string inputWord = null;
 
-        Assert.ThrowsException<ArgumentException>(() => worder.IsPalindromeWordChecker(inputWord));
+        // Assert / Verify the result:
+        Assert.ThrowsException<ArgumentException>(() => Worder.IsPalindromeWordChecker(inputWord));
 
 
     }
+
+    [TestMethod]
+
+    public void StringLenghtCheck()
+    {
+        // Create an instance to test:
+        Worder worder = new Worder();
+
+        // expected output
+        int expectedOutput = 9;
+        string inputWord = "Stockholm";
+
+        // Run the method under test:
+        string actualResult = worder.CheckingStringLength(inputWord);
+        // Assert / Verify the result:
+        Assert.AreEqual(expectedOutput, actualResult);
+
+
+    }
+
+
 
 
 

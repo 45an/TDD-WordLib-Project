@@ -1,13 +1,13 @@
 ﻿namespace WordLib;
 public class Worder
 {
-    public string IsPalindromeWordChecker(string inputWord)
+    public static string IsPalindromeWordChecker(string inputWord)
     {
 
-
+        // Checking if the empty string by using is null or empty metod
         if (string.IsNullOrEmpty(inputWord))
         {
-            throw new ArgumentException("Input string cannot be empty.");
+            throw new ArgumentException("Input string cannot be empty. Please try again");
         }
 
         string inputString, reverseString = string.Empty;
@@ -25,10 +25,12 @@ public class Worder
 
         return reverseString;
 
-        
 
 
     }
 
-
+    public string CheckingStringLength(string inputWord)
+    {
+        throw new NotImplementedException();
+    }
 }
