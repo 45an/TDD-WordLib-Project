@@ -16,5 +16,24 @@ public class UnitTest1
 
         // Assert / Verify the result:
         Assert.IsTrue(result);
+
+        
     }
+
+
+    [TestMethod]
+    public void IsPalindromeTestTwo()
+    {
+        // Create an instance to test:
+        Worder worder = new Worder();
+        string word = "boat";
+
+        // Run the method under test:
+        bool falseResult = worder.IsPalindromeTestTwo(word);
+
+        // Assert / Verify the result:
+        Assert.IsFalse(falseResult);
+    }
+
+
 }
